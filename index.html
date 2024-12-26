@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="уголь, дрова,уголь дёшево прокопьевск, уголь прокопьевск, уголь комковой прокопьевск, уголь в мешках, уголь в мешках прокопьевск, доставка угля в мешках в прокопьевске, дрова в мешках в прокопьевске,уголь прокопьевск, уголь комковой отборный прокопьевск">
+  <meta name="description" content="уголь, дрова,уголь дёшево прокопьевск, уголь прокопьевск, уголь комковой прокопьевск, уголь в мешках, уголь в мешках прокопьевск, доставка угля в мешках в прокопьевске, дрова в мешках в прокопьевске,уголь прокопьевск, уголь комковой отборный прокопьевск">
+  <meta name="author" content="уголь, дрова,уголь дёшево прокопьевск, уголь прокопьевск, уголь комковой прокопьевск, уголь в мешках, уголь в мешках прокопьевск, доставка угля в мешках в прокопьевске, дрова в мешках в прокопьевске,уголь прокопьевск, уголь комковой отборный прокопьевск">
+  <meta http-equiv="refresh" content="600">
+   <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> УГОЛЬ В МЕШКАХ </title>
+<link rel="stylesheet" href="stil.css">
+<link rel="manifest" href="manifest.json">
+
+
+    <link rel="icon" type="image/png" href="favikon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favikon/favicon.svg" />
+  <link rel="shortcut icon" href="favikon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favikon/apple-touch-icon.png" />
+  <link rel="manifest" href="favikon/site.webmanifest" />
+</head>
+<body>
+    <div id="holst">
+        <div id="heder">
+              <img src="img\meshok.bmp" id="mesh"></img>
+              <img src="img\setka.bmp"id="set"></img>
+              <div id="cena_set">
+                  0
+              </div>
+              <div id="cena_mesh">
+                  0
+              </div>
+            <h1 id="zagolovok"><i>УГОЛЬ В МЕШКАХ</i></h1>
+              <button class="butt" title="КНОПКА ЗАКАЗА" id="zakaz" onclick="but_zakaz()">
+                      ЗАКАЗАТЬ
+              </button>
+        </div>
+        <div id="up">
+            <div id="window_u" title="ОКНО С КОЛЛИЧЕСТВОМ МЕШКОВ УГЛЯ">
+                  <div id="lable_ugol">
+                      <h2 id="ugol">УГОЛЬ</h2>
+                  </div>
+                  <div id="doza_ugol" >
+                      10
+                  </div>
+            </div>
+            <button class="unit_but" title="КНОПКА БОЛЬШЕ" id="bolshe" onclick="bolshe()">БОЛЬШЕ</button>
+            <button class="unit_but" title="КНОПКА МЕНЬШЕ" id="menshe" onclick="menshe()">МЕНЬШЕ</button>
+        </div>
+        <div id="down">
+
+            <div id="window_d" title="ОКНО С КОЛЛИЧЕСТВОМ МЕШКОВ ДРОВ" >
+              <div id="lable_drowa">
+                  <h2 id="drowa">ДРОВА</h2>
+              </div>
+              <div id="doza_drowa">
+                  0
+              </div>
+            </div>
+            <button class="unit_but" title="КНОПКА БОЛЬШЕ" id="bolshe_d" onclick="bolshe_d()">БОЛЬШЕ</button>
+            <button class="unit_but" title="КНОПКА МЕНЬШЕ" id="menshe_d"onclick="menshe_d()">МЕНЬШЕ</button>
+        </div>
+
+              <div id="raschot">
+                 <div id="window_dostavka"title="ОКНО С ЦЕНОЙ ДОСТАВКИ">ДОСТАВКА
+                   <div id="window_dostavka_chislo">0</div>
+                 </div>
+                 <div id="window_meshok"title="ОКНО СО СТОИМОСТЬЮ МЕШКОВ">МЕШКИ
+                   <div id="window_meshok_chislo">0</div>
+                 </div>
+                 <div id="window_itogo" title="ОКНО С ПОЛНОЙ СТОИМОСТЬЮ">ИТОГО
+                   <div id="window_itogo_chislo">0</div>
+                 </div>
+              </div>
+
+              <div id="vind_pismo">
+              <i>  Оставте свой отзыв о нас или пожелание, это поможет нам становиться лутше.</i>
+                <form action="mail_pismo.php" method="post">
+                  <textarea required id="texst" type="text" placeholder="Напишите нам и мы обязательно вам оветим, если вы оставите телефон для обратной связи."  name="tell"></textarea>
+                  <input id="butt_otpr" type="submit" value="ОТПРАВИТЬ">
+
+                </form>
+
+                <button id="butt_otmen" onclick="button_otmena_pismo()">ОТМЕНА</button>
+
+
+              </div>
+
+        <div id="futer">  <a id="skachat" href="yourfile.zip" download>Скачать файл</a>
+
+            <button  class="butt" title="НАПИШИТЕ НАМ"  id="pismo"onclick="but_pismo()">НАПИСАТЬ НАМ</button>
+
+
+
+        </div>
+
+
+        <div id="okno_3">
+             <div id="okno_4">
+               <i id="pole" >0</i>
+               <form action="mail_zakaz.php" method="post">
+                 <label><i>Для завершения заявки ведите свой номер телефона</i></label>
+                 <input required  id="telefon" type="tel" maxlength="11" name="tel" placeholder="89000000000">
+                 <input id="Name" type="text" value="myValue"  name="dannie"onchange="myFunction(event)"placeholder="Usernam" hidden>
+                 <input   type="submit" id="but_zakaz_pochta"value="ЗАКАЗАТЬ" >
+       <label>Надо занести</label>
+       <input type="checkbox" name="gruzchik">
+               </form>
+                    <button id="but_otmena_zakaz"onclick="function_otmena()">ОТМЕНА</button>
+             </div>
+
+
+       </div>
+
+
+    </div>
+
+
+   <script src="dex.js"> </script>
+</body>
+
+</html>
